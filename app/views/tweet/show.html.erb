@@ -1,0 +1,12 @@
+<h1>詳細表示</h1>
+<p>ツイート内容：<%= @tweet.message %></p>
+<% elapsed_time=(Time.current - @tweet.tdate)/60  %>
+経過時間：<% if elapsed_time.round(0) > 60 %>
+    <% elapsed_time /= 60 %>
+    <%= elapsed_time.round(0) %>時間前にツイート
+<% else %>
+    <%= elapsed_time.round(0) %>分前にツイート
+<% end %>
+<p><button><%= link_to '戻る', '/' %></button></p>
+
+

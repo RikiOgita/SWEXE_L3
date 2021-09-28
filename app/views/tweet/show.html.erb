@@ -1,7 +1,10 @@
 <h1>詳細表示</h1>
 <p>ツイート内容：<%= @tweet.message %></p>
 <% elapsed_time=(Time.current - @tweet.tdate)/60  %>
-経過時間：<% if elapsed_time.round(0) > 60 %>
+経過時間：<% if elapsed_time.round(0) > 1440 %>
+        <% elapsed_time = elapsed_time/1440 %>
+        <%= elapsed_time.round(0) %>日前
+    <% elsif elapsed_time.round(0) > 60 %>
     <% elapsed_time /= 60 %>
     <%= elapsed_time.round(0) %>時間前にツイート
 <% else %>

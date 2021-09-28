@@ -1,5 +1,21 @@
-<nav>
-    <li>Home</li>
-    <li>Service</li>
-    <li>Contact</li>
-</nav>
+
+    <p><%= image_tag 'home16.png' %>　ホーム</p>
+    <p><%= image_tag 'sharp16.png' %>　話題を検索</p>
+    <p><%= image_tag 'bell16.png' %>　通知</p>
+    <p><%= image_tag 'mail16.png' %>　メッセージ</p>
+    <p><%= image_tag 'bookmark16.png' %>　ブックマーク</p>
+    <p><%= image_tag 'list16.png' %>　リスト</p>
+    <p><%= image_tag 'human16.png' %>　プロフィール</p>
+    <p><%= image_tag 'more16.png' %>　もっと見る</p>
+    <p id = "new_button"><%= link_to 'ツイートする', '/tweet/new' %></p>
+<style>
+    #new_button{
+      display:block;
+      line-height:40px;
+      background:#00acee;
+      color:white;
+      border-radius:25px;
+      text-decoration: none;
+      text-align:center;
+    }
+</style>

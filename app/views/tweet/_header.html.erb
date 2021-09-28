@@ -1,6 +1,41 @@
 <nav>
-    <li>Home</li>
-    <li>Service</li>
-    <li>Contact</li>
+    <ul>
+        <li><a href = "/tweet/"><b>ツイート</b></a></li>
+        <li><a href = ""><b>ツイートと返信</b></a></li>
+        <li><a href = ""><b>メディア</b></a></li>
+        <li><a href = ""><b>いいね</b></a></li>
+    </ul>
 </nav>
 <%= image_tag '' %>
+
+
+<style>
+    nav{
+        text-align:center;
+        margin-top:100px;
+        
+    }
+    
+    nav ul{
+        list-style-type: none;
+        margin:0;
+        padding:0;
+    }
+    
+    nav li{
+        display: inline;
+        
+    }
+    
+    nav li a{
+        text-decoration: none;
+        padding:15px;
+        color: #c0c0c0;
+    }
+    
+    nav li a:active{
+        color: #000;
+        text-decoration:underline 4px #00acee;
+        text-underline-offset: 1em;
+    }
+</style>

@@ -8,13 +8,12 @@ class TweetController < ApplicationController
     end
     
     def create
-        logger.debug "---------" + params[:tweet][:message] + "---------"
         @tweet =Tweet.new(message: params[:tweet][:message],tdate: Time.current)
         if @tweet.save
             flash[:notice] = 'ツイート完了'
             redirect_to root_path
         else 
-            render 'new'
+            render new_tweet_path
         end
     end
     

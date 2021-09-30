@@ -1,126 +1,195 @@
-    <p id = "home"><%= image_tag 'home16.png' %>　ホーム</p>
-    <p id = "topic_search"><%= image_tag 'sharp16.png' %>　話題を検索</p>
-    <p id = "notification"><%= image_tag 'bell16.png' %>　通知</p>
-    <p id = "dm"><%= image_tag 'mail16.png' %>　メッセージ</p>
-    <p id = "bookmark"><%= image_tag 'bookmark16.png' %>　ブックマーク</p>
-    <p id = "list"><%= image_tag 'list16.png' %>　リスト</p>
-    <p id = "profile"><%= image_tag 'human16.png' %>　プロフィール</p>
-    <p id = "more_see"><%= image_tag 'more16.png' %>　もっと見る</p>
-    <p id = "new_button"><%= link_to 'ツイートする', '/tweet/new', class:'linkTo' %></p>
-<style>
-    #home{
-        display:block;
-        line-height:40px;
-        background:#ffffff;
-        color:#000000;
-        border-radius:25px;
-        text-decoration: none;
-        padding-left:20px;
-    }
-    #home:hover{
-        background:#dcdcdc;
-    }
+<!DOCTYPE html>
+<html>
+    <div id = "home"><%= image_tag 'home36.PNG', id:'home_img' %><%= link_to 'ホーム', '/tweet'%></div><br>
+    <div id = "topic_search"><%= image_tag 'sharp36.PNG', id:'sharp_img' %><%= link_to '話題を検索', '/tweet'%></div><br>
+    <div id = "notification"><%= image_tag 'bell36.PNG', id:'mail_img' %><%= link_to '通知', '/tweet'%></div><br>
+    <div id = "dm"><%= image_tag 'mail36.PNG', id:'mail_img' %><%= link_to 'メッセージ', '/tweet'%></div><br>
+    <div id = "bookmark"><%= image_tag 'bookmark36.PNG', id:'bookmark_img' %><%= link_to 'ブックマーク', '/tweet'%></div><br>
+    <div id = "list"><%= image_tag 'list36.PNG', id:'list_img' %><%= link_to 'リスト', '/tweet'%></div><br>
+    <div id = "profile"><%= image_tag 'human36.PNG', id:'human_img' %><%= link_to 'プロフィール', '/tweet'%></div><br>
+    <div id = "more_see"><%= image_tag 'more36.PNG', id:'more_img' %><%= link_to 'もっと見る', '/tweet'%></div><br>
+    <div id = "new_button"><%= link_to 'ツイートする', '/tweet/new', class:'linkTo' %></div><br>
+    <span class = blinking >
+        <% if flash[:notice] %>
+            <%= flash[:notice] %>
+        <% end %>
+    </span>
+</html>
+
     
-    #topic_search{
-        display:block;
-        line-height:40px;
-        background:#ffffff;
-        color:#000000;
-        border-radius:25px;
-        text-decoration: none;
-        padding-left:20px;
-    }
-    #topic_search:hover{
-        background:#dcdcdc; 
-    }
-     
-    #notification{
-        display:block;
-        line-height:40px;
-        background:#ffffff;
-        color:#000000;
-        border-radius:25px;
-        text-decoration: none;
-        padding-left:20px;
-    }
-    #notification:hover{
-        background:#dcdcdc; 
-    }
-     
-    #dm{
-        display:block;
-        line-height:40px;
-        background:#ffffff;
-        color:#000000;
-        border-radius:25px;
-        text-decoration: none;
-        padding-left:20px;
-    }
-    #dm:hover{
-        background:#dcdcdc; 
-    }
-     
-    #bookmark{
-        display:block;
-        line-height:40px;
-        background:#ffffff;
-        color:#000000;
-        border-radius:25px;
-        text-decoration: none;padding-left:20px;
-    }
-    #bookmark:hover{
-        background:#dcdcdc; 
-    }
-     
-    #list{
-        display:block;
-        line-height:40px;
-        background:#ffffff;
-        color:#000000;
-        border-radius:25px;
-        text-decoration: none;
-        padding-left:20px;
-    }
-    #list:hover{
-        background:#dcdcdc; 
-    }
-     
-    #profile{
-        display:block;
-        line-height:40px;
-        background:#ffffff;
-        color:#000000;
-        border-radius:25px;
-        text-decoration: none;
-        padding-left:20px;
-    }
-    #profile:hover{
-        background:#dcdcdc; 
-    }
-     
-    #more_see{
-        display:block;
-        line-height:40px;
-        background:#ffffff;
-        color:#000000;
-        border-radius:25px;
-        text-decoration: none;
-        padding-left:20px;
-    }
-    #more_see:hover{
-        background:#dcdcdc; 
-    }
-     
-    #new_button{
-        display:block;
-        line-height:40px;
-        background:#00acee;
-        color:white;
-        border-radius:25px;
-        text-align:center;
-    }
-    .linkTo:visited{
-        text-decoration: none;
-        color:white;
-    }
+<style>
+#home{
+    display:block;
+    line-height:40px;
+    background:#ffffff;
+    color:#000000;
+    border-radius:50px;
+    text-decoration: none;
+    padding-left:20px;
+    font-size:15pt;
+}
+#home:hover{
+    background:#dcdcdc;
+}
+#home_img{
+    vertical-align:middle;
+}
+
+#topic_search{
+    display:block;
+    line-height:40px;
+    background:#ffffff;
+    color:#000000;
+    border-radius:50px;
+    text-decoration: none;
+    padding-left:20px;
+    font-size:15pt;
+}
+#topic_search:hover{
+    background:#dcdcdc; 
+}
+#sharp_img{
+    vertical-align:middle;
+}
+
+#notification{
+    display:block;
+    line-height:40px;
+    background:#ffffff;
+    color:#000000;
+    border-radius:50px;
+    text-decoration: none;
+    padding-left:20px;
+    font-size:15pt;
+}
+#notification:hover{
+    background:#dcdcdc; 
+}
+#bell_img{
+    vertical-align:middle;
+}
+ 
+#dm{
+    display:block;
+    line-height:40px;
+    background:#ffffff;
+    color:#000000;
+    border-radius:50px;
+    text-decoration: none;
+    padding-left:20px;
+    font-size:15pt;
+}
+#dm:hover{
+    background:#dcdcdc; 
+}
+#mail_img{
+    vertical-align:middle;
+}
+ 
+#bookmark{
+    display:block;
+    line-height:40px;
+    background:#ffffff;
+    color:#000000;
+    border-radius:50px;
+    text-decoration: none;padding-left:20px;
+    font-size:15pt;
+}
+#bookmark:hover{
+    background:#dcdcdc; 
+}
+#bookmark_img{
+    vertical-align:middle;
+}
+ 
+#list{
+    display:block;
+    line-height:40px;
+    background:#ffffff;
+    color:#000000;
+    border-radius:50px;
+    text-decoration: none;
+    padding-left:20px;
+    font-size:15pt;
+}
+#list:hover{
+    background:#dcdcdc; 
+}
+#list_img{
+    vertical-align:middle;
+}
+ 
+#profile{
+    display:block;
+    line-height:40px;
+    background:#ffffff;
+    color:#000000;
+    border-radius:50px;
+    text-decoration: none;
+    padding-left:20px;
+    font-size:15pt;
+}
+#profile:hover{
+    background:#dcdcdc; 
+}
+
+#human_img{
+    vertical-align:middle;
+}
+ 
+#more_see{
+    display:block;
+    line-height:40px;
+    background:#ffffff;
+    color:#000000;
+    border-radius:50px;
+    text-decoration: none;
+    padding-left:20px;
+    font-size:15pt;
+}
+
+#more_see:hover{
+    background:#dcdcdc; 
+}
+#more_img{
+    vertical-align:middle;
+}
+ 
+#new_button{
+    display:block;
+    line-height:40px;
+    background:#00acee;
+    color:white;
+    border-radius:50px;
+    text-align:center;
+    text-decoration: none;
+    font-size:13pt;
+    padding:10px 0px;
+}
+
+.linkTo:visited{
+    text-decoration: none;
+    color:white;
+}
+
+/* 点滅 */
+.blinking{
+	-webkit-animation:blink 1.5s ease-in-out infinite alternate;
+    -moz-animation:blink 1.5s ease-in-out infinite alternate;
+    animation:blink 1.5s ease-in-out infinite alternate;
+    text-align:center;
+    padding-left:50px;
+}
+@-webkit-keyframes blink{
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+@-moz-keyframes blink{
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+@keyframes blink{
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
 </style>

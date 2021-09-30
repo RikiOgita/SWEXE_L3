@@ -1,17 +1,21 @@
-<nav>
-    <ul>
-        <li><a href = "/tweet/"><b>ツイート</b></a></li>
-        <li><a href = ""><b>ツイートと返信</b></a></li>
-        <li><a href = ""><b>メディア</b></a></li>
-        <li><a href = ""><b>いいね</b></a></li>
-    </ul>
-</nav>
-<%= image_tag '' %>
+<!DOCTYPE html>
+<html>
+    <body>
+        <nav>
+            <ul>
+                <li><a href = "/tweet">ツイート</a></li>
+                <li><a href = "">ツイートと返信</a></li>
+                <li><a href = "">メディア</a></li>
+                <li><a href = "">いいね</a></li>
+            </ul>
+        </nav>
+    </body>
+</html>
 
 
 <style>
     nav{
-        margin-top:100px;
+        margin-top:80px;
         
     }
     
@@ -23,18 +27,21 @@
     
     nav li{
         display: inline;
-        
+        padding:15px;
     }
     
     nav li a{
         text-decoration: none;
-        padding:15px;
         color: #808080;
     }
     
     nav li a:active{
+        font-weight: bold;
         color: #000;
         text-decoration:underline 4px #00acee;
         text-underline-offset: 1em;
+    }
+    nav ul li:hover{
+        background-color:#ccc;
     }
 </style>

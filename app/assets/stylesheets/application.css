@@ -14,3 +14,38 @@
  *= require_self
  */
 
+body {
+    width:1100px;
+    margin:0 auto;
+}
+  
+#header{
+    width:720px;
+    float: right;
+    float: top;
+    border-bottom:solid 1px #ccc;
+    padding-bottom:20px;
+    border-right:solid 1px #ccc;
+    padding-right:40px;
+    border-left:solid 1px #ccc;
+    padding-left:40px;
+    text-align:center;
+}
+  
+#sidebar{
+    width: 220px;
+    float: left;
+    padding-top:80px;
+}
+  
+#content{
+    height: 720px;
+    width: 720px;
+    float: right;
+    float: bottom;
+    border-right:solid 1px #ccc;
+    padding-right:40px;
+    border-left:solid 1px #ccc;
+    padding-left:40px;
+}
+

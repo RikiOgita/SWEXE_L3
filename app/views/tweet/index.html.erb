@@ -1,47 +1,39 @@
-
-    <% @tweet.each do |tweet| %> 
-    <p>
-    <% elapsed_time=(Time.current - tweet.tdate)/60  %>
-    <%= tweet.message %>：
-    <% if elapsed_time.round(0) > 1440 %>
-        <% elapsed_time = elapsed_time/1440 %>
-        <%= elapsed_time.round(0) %>日前
-    <% elsif elapsed_time.round(0) > 60 %>
-        <% elapsed_time /= 60 %>
-        <%= elapsed_time.round(0) %>時間前
-    <% else %>
-        <%= elapsed_time.round(0) %>分前
-    <% end %>
-    
-    <%= link_to '表示', "/tweet/#{tweet.id}" %>
-    <%= link_to '編集', "/tweet/#{tweet.id}/edit" %>
-    <%= link_to '削除', "/tweet/#{tweet.id}",method: :delete %>
-    </p>
-    <% end %>
-    
-    <span class = blinking >
-    <% if flash[:notice] %>
-        <%= flash[:notice] %>
-    <% end %>
-    </span>
+<!DOCTYPE html>
+<html>
+    <body>
+        <% @tweet.each do |tweet| %>
+            <p id = 'show_top'>
+            <%= image_tag 'roket.png', id:'myicon' %>
+            <b>荻田吏基</b>
+            <% elapsed_time=(Time.current - tweet.tdate)/60  %>
+            <% if elapsed_time.round(0) > 1440 %>
+                <% elapsed_time = elapsed_time/1440 %>
+                <%= elapsed_time.round(0) %>日前
+            <% elsif elapsed_time.round(0) > 60 %>
+                <% elapsed_time /= 60 %>
+                <%= elapsed_time.round(0) %>時間前
+            <% else %>
+                <%= elapsed_time.round(0) %>分前
+            <% end %><br>
+            <%= tweet.message%><br>
+            <%= link_to '表示', "/tweet/#{tweet.id}" %>
+            <%= link_to '編集', "/tweet/#{tweet.id}/edit" %>
+            <%= link_to '削除', "/tweet/#{tweet.id}",method: :delete %>
+            </p>
+        <% end %>
+    </body>
+</html>
 
 <style>
-    /* 点滅 */
-.blinking{
-	-webkit-animation:blink 1.5s ease-in-out infinite alternate;
-    -moz-animation:blink 1.5s ease-in-out infinite alternate;
-    animation:blink 1.5s ease-in-out infinite alternate;
+#show_top{
+    width:500px;
+    float:left;
 }
-@-webkit-keyframes blink{
-    0% {opacity:0;}
-    100% {opacity:1;}
-}
-@-moz-keyframes blink{
-    0% {opacity:0;}
-    100% {opacity:1;}
-}
-@keyframes blink{
-    0% {opacity:0;}
-    100% {opacity:1;}
+#myicon {
+    border-radius: 50%;
+    width:  40px;
+    height: 40px;
+    vertical-align:middle;
+    border: 1px solid #ccc;
 }
 </style>

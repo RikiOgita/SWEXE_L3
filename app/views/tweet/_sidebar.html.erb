@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html>
-    <div><%= image_tag 'bird.png',id:"bird_icon" %><%= link_to '','/tweet' %></div>
-    <div id = "home"><%= image_tag 'home36.PNG', id:'sidebar_img' %><%= link_to 'ホーム', '/tweet', id:'sidebar_linkTo' %></div><br>
-    <div id = "topic_search"><%= image_tag 'sharp36.PNG', id:'sidebar_img' %><%= link_to '話題を検索', '/tweet', id:'sidebar_linkTo'%></div><br>
-    <div id = "notification"><%= image_tag 'bell36.PNG', id:'sidebar_img' %><%= link_to '通知', '/tweet', id:'sidebar_linkTo'%></div><br>
-    <div id = "dm"><%= image_tag 'mail36.PNG', id:'sidebar_img' %><%= link_to 'メッセージ', '/tweet', id:'sidebar_linkTo'%></div><br>
-    <div id = "bookmark"><%= image_tag 'bookmark36.PNG', id:'sidebar_img' %><%= link_to 'ブックマーク', '/tweet', id:'sidebar_linkTo'%></div><br>
-    <div id = "list"><%= image_tag 'list36.PNG', id:'sidebar_img' %><%= link_to 'リスト', '/tweet', id:'sidebar_linkTo'%></div><br>
-    <div id = "profile"><%= image_tag 'human36.PNG', id:'sidebar_img' %><%= link_to 'プロフィール', '/tweet', id:'sidebar_linkTo'%></div><br>
-    <div id = "more_see"><%= image_tag 'more36.PNG', id:'sidebar_img' %><%= link_to 'もっと見る', '/tweet', id:'sidebar_linkTo'%></div><br>
-    <div id = "new_button"><%= link_to 'ツイートする', '/tweet/new', class:'new_linkTo' %></div><br>
+    <ul>
+        <div><%= image_tag 'bird.png',id:"bird_icon" %><%= link_to '','/tweet' %></div>
+        <li id = "sidebar_list"><%= image_tag 'home36.PNG', id:'sidebar_img' %><%= link_to 'ホーム', '/tweet', id:'sidebar_linkTo' %></li>
+        <li id = "sidebar_list"><%= image_tag 'sharp36.PNG', id:'sidebar_img' %><%= link_to '話題を検索', '/tweet', id:'sidebar_linkTo'%></li>
+        <li id = "sidebar_list"><%= image_tag 'bell36.PNG', id:'sidebar_img' %><%= link_to '通知', '/tweet', id:'sidebar_linkTo'%></li>
+        <li id = "sidebar_list"><%= image_tag 'mail36.PNG', id:'sidebar_img' %><%= link_to 'メッセージ', '/tweet', id:'sidebar_linkTo'%></li>
+        <li id = "sidebar_list"><%= image_tag 'bookmark36.PNG', id:'sidebar_img' %><%= link_to 'ブックマーク', '/tweet', id:'sidebar_linkTo'%></li>
+        <li id = "sidebar_list"><%= image_tag 'list36.PNG', id:'sidebar_img' %><%= link_to 'リスト', '/tweet', id:'sidebar_linkTo'%></li>
+        <li id = "sidebar_list"><%= image_tag 'human36.PNG', id:'sidebar_img' %><%= link_to 'プロフィール', '/tweet', id:'sidebar_linkTo'%></li>
+        <li id = "sidebar_list"><%= image_tag 'more36.PNG', id:'sidebar_img' %><%= link_to 'もっと見る', '/tweet', id:'sidebar_linkTo'%></li>
+        <li id = "new_button"><%= link_to 'ツイートする', '/tweet/new', class:'new_linkTo' %></li>
+    </ul>
     <span class = blinking >
         <% if flash[:notice] %>
             <%= flash[:notice] %>
@@ -17,3 +19,78 @@
     </span>
 </html>
 
+<style>
+    /*_sidebar.html.erbのcss*/
+#bird_icon{
+    padding-left: 20px;
+}
+#sidebar_list{
+    display:block;
+    background:#ffffff;
+    color:#000000;
+    border-radius:50px;
+    font-size:13pt;
+    list-style: none;
+}
+#sidebar_list:hover{
+    background:#dcdcdc;
+}
+
+
+#sidebar_linkTo:link{
+    text-decoration: none;
+    color:#000000;
+}
+#sidebar_linkTo:visited{
+    text-decoration: none;
+    color:#000000;
+}
+#sidebar_img{
+    vertical-align:middle;
+}
+
+
+#new_button{
+    display:block;
+    line-height:40px;
+    background:#00acee;
+    color:white;
+    border-radius:50px;
+    text-align:center;
+    text-decoration: none;
+    font-size:10pt;
+    padding:10px 0px;
+    font-weight: bold;
+    margin-top:10px;
+    
+}
+.new_linkTo:link{
+    text-decoration: none;
+    color:white;
+}
+.new_linkTo:visited{
+    text-decoration: none;
+    color:white;
+}
+
+/* 点滅 */
+.blinking{
+	-webkit-animation:blink 1.5s ease-in-out infinite alternate;
+    -moz-animation:blink 1.5s ease-in-out infinite alternate;
+    animation:blink 1.5s ease-in-out infinite alternate;
+    text-align:center;
+    padding-left:50px;
+}
+@-webkit-keyframes blink{
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+@-moz-keyframes blink{
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+@keyframes blink{
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+</style>

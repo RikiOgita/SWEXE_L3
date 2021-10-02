@@ -3,20 +3,19 @@
     <body>
         <nav>
             <ul>
-                <li><a href = "/tweet">ツイート</a></li>
-                <li><a href = "">ツイートと返信</a></li>
-                <li><a href = "">メディア</a></li>
-                <li><a href = "">いいね</a></li>
+                <li><%= link_to 'ツイート', "/tweet" %></li>
+                <li><%= link_to 'ツイートと返信', "/tweet" %></li>
+                <li><%= link_to 'メディア', "/tweet" %></li>
+                <li><%= link_to 'いいね', "/tweet" %></li>
             </ul>
         </nav>
     </body>
 </html>
 
-
 <style>
+    /*_sidebar.html.erbのcss*/
     nav{
         margin-top:80px;
-        
     }
     
     nav ul{
